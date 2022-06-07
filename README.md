@@ -1,1 +1,2 @@
 # presentations_render
+This is a vagrant environment configured as a base for displaying presentations for CloudNative courses or OpenStack courses. It should automatically deploy all needed packages to run either the cn.sh or os.sh scripts to render the html for slides and exercise assets.

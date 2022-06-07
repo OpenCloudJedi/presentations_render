@@ -1,0 +1,35 @@
+---
+- name: Configure ubuntu presentation server
+  hosts: all
+  become: yes
+
+  tasks:
+
+    - name: Install all the software needed
+      apt:
+        name: "{{ item }}"
+        state: latest
+      loop:
+        - bash-completion       
+        - vim
+        - git
+        - jq
+        - docker.io
+    - name: Download os.sh script
+      get_url:
+        url: https://bit.ly/3rWZkgQ
+        dest: /home/vagrant/os.sh
+        owner: vagrant
+        mode: '0755'
+    - name: Download cn.sh script
+      get_url:
+        url: https://bit.ly/2SAIbNg
+        dest: /home/vagrant/cn.sh
+        owner: vagrant
+        mode: '0755'
+    - name: Add vagrant user to the docker group
+      user:
+        name: vagrant
+        groups: sudo,docker
+        append: yes
+
