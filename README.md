@@ -39,6 +39,6 @@ _Gatekeeper will block virtualbox from installing. All you have to do is go into
 - `vagrant ssh ubuntu` - Uses console connection to ssh to the VM
 - `vagrant up --provision` - Builds the servers that were destroyed and runs provisioning scripts again
 
-This machine has the IP 192.168.2.100. When ren dering the slides you will use this IP in the browser followed by the port. 
+This machine has the IP `192.168.2.100`. When rendering the slides you will use this IP in the browser followed by the port. 
 Example:
 - `192.168.2.100:8000` - This would connect to the site for slides on port 8000
